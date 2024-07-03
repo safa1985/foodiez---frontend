@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/">
-              <span className="font-semibold text-xl text-white">Foodiez </span>
+              <span className="font-semibold text-xl text-white">Foodiez</span>
             </Link>
           </div>
           <div className="block">
@@ -41,14 +41,14 @@ const Navbar = () => {
                     to="/categories"
                     className="text-gray-300 hover:bg-sky-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    categories
+                    Categories
                   </NavLink>
 
                   <button
                     className="text-gray-300 hover:bg-sky-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     onClick={mutate}
                   >
-                    logout
+                    Logout
                   </button>
                 </>
               ) : (
