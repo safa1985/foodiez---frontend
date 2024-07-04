@@ -1,13 +1,22 @@
 import { useMutation } from "@tanstack/react-query";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { register } from "../api/auth";
+import { useNavigate } from "react-router-dom";
+import UserContext from "../context/UserContext";
 
 const Register = () => {
   const [userInfo, setUserInfo] = useState({});
 
+  const [user, setUser] = useContext(UserContext);
+  const navigate = useNavigate();
+
   const { mutate } = useMutation({
     mutationKey: ["register"],
     mutationFn: () => register(userInfo),
+    onSuccess: () => {
+      setUser(true);
+      navigate("/");
+    },
   });
 
   const handleChange = (e) => {
@@ -80,7 +89,8 @@ const Register = () => {
           <button
             onClick={mutate}
             type="submit"
-            className="mt-8 inline-block rounded bg-sky-600 px-5 py-2 text-lg font-medium text-white shadow-lg transition-transform transform hover:scale-105 hover:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300"          >
+            className="mt-8 inline-block rounded bg-sky-600 px-5 py-2 text-lg font-medium text-white shadow-lg transition-transform transform hover:scale-105 hover:bg-sky-700 focus:outline-none focus:ring focus:ring-sky-300"
+          >
             Register
           </button>
         </div>
