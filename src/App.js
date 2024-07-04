@@ -11,6 +11,7 @@ import Profile from "./pages/Profile";
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import Recipes from "./pages/Recipes";
+import RecipesList from "./components/RecipesList";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -31,7 +32,9 @@ function App() {
           <Route path="/login" Component={Login} />
           <Route path="/profile" Component={Profile} />
           <Route path="/register" Component={Register} />
-          <Route path="/recipes" Component={Recipes} />
+          <Route path="/recipes" Component={RecipesList} />
+          <Route path="/recipes/:id" Component={RecipesList} />{" "}
+          {/* Recipe Page */}
         </Routes>
       </div>
     </UserContext.Provider>
