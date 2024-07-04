@@ -10,13 +10,13 @@ const getOneRecipe = async (id) => {
   return res.data;
 };
 
-const createNewRecipe = async (name, instructions, images) => {
-  console.log(type);
-  const res = await instance.post("/api/recipes", {
-    name: name,
-    images: images,
-    instructions: instructions,
-  });
+const createNewRecipe = async (recipe) => {
+  const formData = new FormData();
+
+  for (let key in recipe) {
+    formData.append(key, recipe[key]);
+  }
+  const res = await instance.post("/api/recipes", formData);
   return res.data;
 };
 

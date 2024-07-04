@@ -1,5 +1,12 @@
 import instance from ".";
 
+
+const getAllCategories = async () => {
+  const { data } = await instance.get("/api/category/");
+  console.log(data);
+  return data;
+};
+
 const fetchCategories = async () => {
   const { data } = await instance.get("/api/categories");
   return data;
@@ -31,4 +38,6 @@ export {
   fetchRecipes,
   createCategory,
   createRecipe,
+  getAllCategories
 };
+
