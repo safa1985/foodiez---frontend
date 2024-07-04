@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Login from "./pages/Login";
+import Login from "./pages/login";
 import Register from "./pages/Register";
 import { useState } from "react";
 import { useEffect } from "react";
 import { getToken } from "./api/storage";
 import UserContext from "./context/UserContext";
-import Profile from "./pages/Profile";
-import Home from "./pages/Home";
+import Profile from "./pages/profile";
+import Home from "./pages/home";
 import Categories from "./pages/Categories";
 import Recipes from "./pages/Recipes";
 
@@ -27,11 +27,11 @@ function App() {
         <Navbar user={user} setUser={setUser} />
         <Routes>
           <Route path="/" Component={Home} />
-          <Route path="/categories" Component={Categories} />
+          <Route path="/Categories" Component={Categories} />
+          <Route path="/Categories/:categoryName" Component={Categories} />
           <Route path="/login" Component={Login} />
           <Route path="/profile" Component={Profile} />
           <Route path="/register" Component={Register} />
-          <Route path="/recipes" Component={Recipes} />
         </Routes>
       </div>
     </UserContext.Provider>
