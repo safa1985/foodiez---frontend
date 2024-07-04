@@ -153,7 +153,7 @@ const Categories = () => {
           <div key={recipe._id} className="flex flex-col items-center">
             <img
               className="h-48 w-48 rounded-lg object-cover border-4 border-gray-700 shadow-lg transform hover:scale-105 transition duration-300"
-              src={recipe.image}
+              src={"http://localhost:8000/" + recipe.image}
               alt={recipe.title}
             />
             <div className="mt-2 text-lg font-semibold text-white">
