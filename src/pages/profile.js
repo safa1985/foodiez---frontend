@@ -41,9 +41,7 @@ const Profile = () => {
         <h1 className="text-4xl font-bold text-white mb-4">
           {profile?.username}'s Profile
         </h1>
-        <p className="text-lg text-gray-300 mb-6">
-          Recipes: {profile?.recipes}
-        </p>
+        <p className="text-lg text-gray-300 mb-6"></p>
         <div className="mb-6">
           <label
             htmlFor="image"

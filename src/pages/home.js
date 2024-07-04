@@ -64,7 +64,7 @@ const Home = () => {
             <div className="flex flex-col items-center">
               <img
                 alt="Community of Food Lovers"
-                src="https://via.placeholder.com/600x400" // Add your image link here
+                src="https://img1.wsimg.com/isteam/ip/713e6a7d-d350-4414-8064-846d9a95656c/5baaac8c-0fbf-4300-a0ab-e300fa394dc3.jpg"
                 className="h-64 w-full rounded-lg object-cover shadow-lg transform hover:scale-105 transition duration-300"
               />
               <p className="mt-4 text-gray-300 leading-relaxed text-center">
@@ -93,7 +93,7 @@ const Home = () => {
             <div className="flex flex-col items-center">
               <img
                 alt="Step-by-Step Recipes"
-                src="https://assets-global.website-files.com/636d05d634d44a6b9954e354/63c67e91dcb5964966b31876_Recipe%20Creation%20ChatGPT%20AI%20home%20professional%20cooks.webp"
+                src="https://as1.ftcdn.net/v2/jpg/05/86/19/94/1000_F_586199407_dtkxYTk8pL26UvFIP3vgVwhnDr42LII7.jpg"
                 className="h-64 w-full rounded-lg object-cover shadow-lg transform hover:scale-105 transition duration-300"
               />
               <p className="mt-4 text-gray-300 leading-relaxed text-center">
