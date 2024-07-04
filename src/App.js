@@ -27,10 +27,10 @@ function App() {
         <Routes>
           <Route path="/" Component={home} />
           <Route path="/Categories" Component={Categories} />
+          <Route path="/Categories/:categoryName" Component={Categories} />
           <Route path="/login" Component={Login} />
           <Route path="/profile" Component={Profile} />
           <Route path="/register" Component={Register} />
-   
         </Routes>
       </div>
     </UserContext.Provider>
