@@ -54,7 +54,7 @@ const RecipeModal = ({ show, setShowModal }) => {
   });
   const multiselectOptionsCat = cats?.map((cat) => {
     return {
-      label: cat.name,
+      label: cat.title,
       value: cat._id,
     };
   });

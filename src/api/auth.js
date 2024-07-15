@@ -15,6 +15,7 @@ const register = async (userInfo) => {
     formData.append(key, userInfo[key]);
   }
   const { data } = await instance.post("/api/users/signup", formData);
+  console.log(data);
   if (data.token) {
     storeToken(data.token);
   }
